@@ -236,13 +236,13 @@ int main() {
 
   cout << "For statement";
 
-  for(int i = 0; i < 10; i++) {
+  for (int i = 0; i < 10; i++) {
     cout << "Counting.. " << i;
   }
 
   cout << "For break";
-  for(int i = 0; i < 10; i++) {
-    if(i == 5) {
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) {
       cout << "Finishing this for loop using break";
       break;
     }
@@ -250,13 +250,69 @@ int main() {
   }
 
   cout << "For continue";
-  for(int i = 0; i < 10; i++) {
-    if(i == 5) {
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) {
       cout << "Just jumping this loop using continue, lets for next";
       continue;
     }
     cout << "Counting.. " << i;
   }
+
+  cout << "Arrays...";
+  string myCars[4] = {"Volvo", "BMW", "Chevrolet", "Mercedes"};
+  cout << "You can create without omiting the size";
+  string myCarsTwo[] = {"Volvo", "BMW", "Chevrolet", "Mercedes"};
+  cout << "Printing myCars[2] -> ";
+  cout << myCars[2];
+
+  cout << "Changing myCars[2] to Dodge using myCars[2] = \"Dogdge\" ";
+  myCars[2] = "Dodge";
+
+  cout << "Printing myCars[2] -> ";
+  cout << myCars[2];
+
+  cout << "Using structures";
+  struct {
+    int id;
+    string name;
+  } myFirstStruct;
+
+  myFirstStruct.id = 1;
+  myFirstStruct.name = "My Struct 1";
+
+  cout << "myFirstStruct: " << myFirstStruct.id << " - " << myFirstStruct.name;
+
+  cout << "We can declare more than one variable at same struct";
+
+  struct {
+    int id;
+    string name;
+  } mySecondStruct, myThirdStruct;
+
+  mySecondStruct.id = 2;
+  mySecondStruct.name = "My Struct 2";
+  myThirdStruct.id = 3;
+  myThirdStruct.name = "My Struct 3";
+
+  cout << "We can just declare the structure and declare a variable after...";
+
+  struct myStructDataTypeName {
+    int id;
+    string name;
+  };
+
+  myStructDataTypeName structDeclared;
+
+  cout << "Creating references";
+  cout << "Just create a variable starting with &";
+  const string favoriteMeal = "Pizza";
+  const string &meal = favoriteMeal;
+
+  cout << "favoriteMeal: " << favoriteMeal;
+  cout << "meal: " << meal;
+
+  cout << "cout << &meal should print hexadecimal memory address";
+  cout << &meal;
 
   return 0;
 }
