@@ -1,3 +1,5 @@
+#include <cctype>
+#include <cmath>
 #include <iostream>
 
 using namespace std;
@@ -139,7 +141,8 @@ int main() {
   helloWorld[0] = 'N';
   cout << "After Change: " << helloWorld;
 
-  cout << "Get user input using cin, and get cin output to variable using >> (cin >> variable)";
+  cout << "Get user input using cin, and get cin output to variable using >> "
+          "(cin >> variable)";
   string yourName;
   cout << "Tell me your name: ";
   cin >> yourName;
@@ -150,5 +153,110 @@ int main() {
   std::string myStdString = "Declared using namespace std";
   std::cout << "Printed using namespace std";
 
-      return 0;
+  cout << "Import cmath using the header #include <cmath>";
+  cout << "cmath is for use sqrt(), round(), and log()";
+
+  cout << "Max and min for find the minor or max between two numbers";
+  cout << max(2, 18);
+  cout << min(5, 10);
+
+  cout << "Using cmath: ";
+  cout << "Sqrt Input: 144 , round Input: 2.8, log Input: 2";
+  cout << sqrt(144.0);
+  cout << round(2.8);
+  cout << log(2);
+
+  cout << "---Using if and else";
+
+  string isAmOrPm;
+
+  cout << "Tell me the period of the day: (AM/PM)";
+  cin >> isAmOrPm;
+
+  cout << "Using if and else ";
+  if (isAmOrPm == "AM") {
+    cout << "Go launch!";
+  } else {
+    cout << "Go dinner!";
+  }
+
+  cout << "Using ternary";
+  const string isAmOrPmResult =
+      (isAmOrPm == "AM") ? "Go launch!" : "Go dinner!";
+
+  cout << isAmOrPmResult;
+
+  cout << "Using switch case";
+
+  cout << "Tell me a day number: (1,2,3,4,5,6,7)";
+  int inputedDay;
+  cin >> inputedDay;
+
+  switch (inputedDay) {
+  case 1:
+    cout << "Sunday";
+    break;
+  case 2:
+    cout << "Monday";
+    break;
+  case 3:
+    cout << "Tuesday";
+    break;
+  case 4:
+    cout << "Wednesday";
+    break;
+  case 5:
+    cout << "Thursday";
+    break;
+  case 6:
+    cout << "Friday";
+    break;
+  case 7:
+    cout << "Saturday";
+    break;
+  default:
+    cout << "Its not a day :(";
+    break;
+  }
+
+  cout << "Using while loop";
+  int loopsCount = 0;
+  const int maxLoops = 4;
+
+  while (loopsCount <= maxLoops) {
+    cout << loopsCount;
+    loopsCount++;
+  }
+
+  cout << "Using do while loop";
+  do {
+    cout << loopsCount;
+    loopsCount++;
+  } while (loopsCount <= maxLoops);
+
+  cout << "For statement";
+
+  for(int i = 0; i < 10; i++) {
+    cout << "Counting.. " << i;
+  }
+
+  cout << "For break";
+  for(int i = 0; i < 10; i++) {
+    if(i == 5) {
+      cout << "Finishing this for loop using break";
+      break;
+    }
+    cout << "Counting.. " << i;
+  }
+
+  cout << "For continue";
+  for(int i = 0; i < 10; i++) {
+    if(i == 5) {
+      cout << "Just jumping this loop using continue, lets for next";
+      continue;
+    }
+    cout << "Counting.. " << i;
+  }
+
+  return 0;
 }
