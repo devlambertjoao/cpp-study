@@ -314,5 +314,38 @@ int main() {
   cout << "cout << &meal should print hexadecimal memory address";
   cout << &meal;
 
+  cout << "Using pointers";
+
+  string carName = "BMW M2";
+
+  cout << "cout << carName must print the value";
+  cout << carName;
+
+  cout << "cout << &carName must print the memory address";
+  cout << &carName;
+
+  cout << "Creating pointer using string* carNamePtr = &carName";
+  string *carNamePtr = &carName;
+
+  cout << "cout << carName -> Prints value";
+  cout << carName;
+  cout << "cout << &carName -> Prints memory address";
+  cout << &carName;
+  cout << "cout << carNamePtr -> Prints memory address with pointer";
+  cout << carNamePtr;
+
+  cout << "Reference: cout << carNamePtr -> prints memory address with pointer";
+  cout << carNamePtr;
+  cout << "Deference: cout << *carNamePtr -> prints the value of variable with "
+          "the pointer";
+  cout << *carNamePtr;
+
+  cout
+      << "We can change the value of pointer using *carNamePtr = \"New Value\"";
+  cout << "Before: " << *carNamePtr;
+  *carNamePtr = "BMW X6";
+  cout << "After: " << *carNamePtr;
+  cout << "Car name after changing the pointer value: " << carName;
+
   return 0;
 }
