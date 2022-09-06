@@ -10,6 +10,10 @@ void print(string message);
 void printd(string message = "No message bro!");
 void printPerson(string name, int age);
 void arraysOnParams(int numbers[5]);
+void myFunctionOverload(int a, int b);
+void myFunctionOverload(string a, string b);
+int myFunctionOverload(double a, float b);
+
 
 void myFirstFunction() {
   // Should be executed;
